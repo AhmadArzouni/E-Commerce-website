@@ -13,6 +13,23 @@ code {
     monospace;
 }
 .card1 img{height: 200px;width: 180px;}
-.card img{height: 700px;}
+.card1:hover{transform: scale(1.1);}
+.card1{transition: 0.5s;}
+.card img{height: 500px;}
 .product{display: flex;}
 .info{width: 50%;}
+.ahmad{display: flex;}
+.ahmad1{margin-right: 20px;}
+.aboutContent{background-color: #d66c46;}
+.row1{background-color: black;display: flex;}
+.col p{color:rgb(49, 42, 42)}
+.col{width: 33%;margin-left: 90px;margin-top: 30px;}
+.app-logo img{width: 200px;height: 150px;}
+.col h3{color: white;}
+.col a{text-decoration: none;color: rgb(49, 42, 42);}
+.title{margin: 75px;}
+.cn{background-color: rgb(14, 13, 13);height:100%;color: white; }
+.v input{margin-right: 30px;margin-bottom: 25px;}
+.v input{background-color: rgb(49, 42, 42) ;color: white;width: 200px;}
+textarea{width: 430px;background-color: rgb(49, 42, 42) ;color: white;height: 200px;}
+button{background-color: rgb(49, 42, 42) ;color: white;}

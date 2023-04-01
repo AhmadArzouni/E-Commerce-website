@@ -1,11 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useState,useEffect } from 'react';
+import { useState,useEffect} from 'react';
 import { Link } from "react-router-dom";
 import { AiFillStar } from 'react-icons/ai';
 import Skeleton from 'react-loading-skeleton';
 
+
+
 export default function Product() {
+  
+ 
     const {id}=useParams();
     const [isloading, setisloading] = useState(true);
     const [product, setproduct] = useState("");
@@ -28,8 +32,36 @@ const Loading = () => {
 
 return(
     <div className='loading'>
-<Skeleton height={400}/>
-    Loading...
+<div className='product'>
+  <div className='info'>
+  <Skeleton width={400} height={400} />
+  </div>
+    <div className='info'>
+    <Skeleton height={30} width={200}/>
+    <br></br>
+    <Skeleton height={50} width={800}/>
+      <div className='rate'>
+      <Skeleton height={50} width={200}/>
+      
+      <Skeleton height={30} width={100}/>
+      </div>
+      <br></br>
+      <Skeleton height={30} width={100}/>
+      <Skeleton height={100} width={800}/>
+      <br></br>
+      <div className="ahmad">
+      <div className="ahmad1">
+      <Skeleton height={50} width={100}/>
+      </div>
+      <div className="ahmad1">
+      <Skeleton height={50} width={100}/>
+      </div>
+      </div>
+     
+
+
+    </div>
+    </div>
     </div>
 );
 
@@ -53,7 +85,7 @@ return(
       <Link to="/" class="btn  btn-outline-dark">Add to Cart</Link>
       <Link to="/cart" class="btn  btn-outline-dark m-2">Go to Cart</Link>
 
-
+ 
     </div>
     </div>
     
@@ -69,6 +101,7 @@ return(
   return (
     <div>
 {isloading?<Loading/>:<Showproduct/>}
+
 
     </div>
   )

@@ -19,11 +19,58 @@ const filterproducts=(cat)=>{
   const Loading = () => {
     return(
       <>
-      <div className="ahmad">
-Loading...<Skeleton height={350}/>
+      
+       <div className="ahmad">
+      <div className="col-md-3">
+              <div class="card1 h-100 text-center p-4 ">
+                
+                <div class="card-body">
+                  
+                  
+                <Skeleton height={200} width={180}/>
+                  
+                </div>
+              </div>
+            </div> 
+            <div className="col-md-3">
+              <div class="card1 h-100 text-center p-4 ">
+                
+                <div class="card-body">
+                  
+                  
+                <Skeleton height={200} width={180}/>
+                  
+                </div>
+              </div>
+            </div> 
+            <div className="col-md-3">
+              <div class="card1 h-100 text-center p-4 ">
+                
+                <div class="card-body">
+                  
+                  
+                <Skeleton height={200} width={180}/>
+                  
+                </div>
+              </div>
+            </div> 
+            <div className="col-md-3">
+              <div class="card1 h-100 text-center p-4 ">
+                
+                <div class="card-body">
+                  
+                  
+                <Skeleton height={200} width={180}/>
+                  
+                </div>
+              </div>
+            </div> 
+          
+         
+            </div>
+
     
 
-      </div>
      
       
       
@@ -46,6 +93,7 @@ Loading...<Skeleton height={350}/>
         </div>
 <div className="row">
         {Filter.map((product) => {
+        
           return (
             <div className="col-md-3">
               <div class="card1 h-100 text-center p-4 " key={product.id}>
@@ -86,9 +134,9 @@ Loading...<Skeleton height={350}/>
     <div>
       <div className="title">
         <h1 className="title display-6 fw-bolder text-center">
-          Latest Products
+          Latest Products <hr />
         </h1>
-        <hr />
+       
       </div>
       {!ispending && <Showproducts />}
       {ispending && <Loading />}
