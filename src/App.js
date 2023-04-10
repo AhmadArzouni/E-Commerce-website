@@ -17,7 +17,7 @@ export const Context=createContext(null);
 
 
 function App() {
-  const [counter,setcounter]=useState(7);
+  const [counter,setcounter]=useState(0);
   return (
     <Router>
 

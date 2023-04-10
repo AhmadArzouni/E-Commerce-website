@@ -19,7 +19,7 @@ setTimeout(() => {
     }
   return (
     <div className='cn'>
-        <>.</>
+        
     <div className='title'>
         <h1 >Contact Us</h1>
         <br></br>

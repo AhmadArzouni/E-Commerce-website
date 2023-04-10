@@ -15,7 +15,7 @@ const add=()=>{
   const c=counter+1;
   setcounter(c);
   
-  
+  console.log("ahmad");
     }
  
     const {id}=useParams();
@@ -78,7 +78,7 @@ const Showproduct=()=>{
 return(
 <div className='product'>
   <div className='info'>
-  <img src={product.image} height="400px" width="400px" /> 
+  <img src={product.image} height="80%" width="60%" /> 
   </div>
     <div className='info'>
 {console.log(product)}
@@ -90,8 +90,8 @@ return(
       <br></br>
       <h2><b>$ {product.price}</b></h2>
       <p>{product.description}</p><br></br>
-      <Link class="btn  btn-outline-dark" onclick={add}>Add to Cart</Link>
-      <Link  class="btn  btn-outline-dark m-2" onclick={add}>Go to Cart</Link>
+      <Link class="btn  btn-outline-dark" onClick={add}>Add to Cart</Link>
+      <Link to='/cart' class="btn  btn-outline-dark m-2" >Go to Cart</Link>
 
  
     </div>

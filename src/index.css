@@ -16,7 +16,7 @@ code {
 .card1:hover{transform: scale(1.1);}
 .card1{transition: 0.5s;}
 .card img{height: 500px;}
-.product{display: flex;}
+.product{display: flex;max-width: 100%;}
 .info{width: 50%;}
 .ahmad{display: flex;}
 .ahmad1{margin-right: 20px;}
@@ -28,8 +28,32 @@ code {
 .col h3{color: white;}
 .col a{text-decoration: none;color: rgb(49, 42, 42);}
 .title{margin: 75px;}
-.cn{background-color: rgb(14, 13, 13);height:100%;color: white; }
+.cn{background-color: rgb(14, 13, 13);height:100%;width:100%;position:fixed;color: white; }
 .v input{margin-right: 30px;margin-bottom: 25px;}
 .v input{background-color: rgb(49, 42, 42) ;color: white;width: 200px;}
 textarea{width: 430px;background-color: rgb(49, 42, 42) ;color: white;height: 200px;}
 button{background-color: rgb(49, 42, 42) ;color: white;}
+@media only screen and (max-width: 600px) {
+  .cn {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .product {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .info {
+    height: 50%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .col {
+ 
+    width: 33%;
+  }
+}
