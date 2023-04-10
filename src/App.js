@@ -25,7 +25,7 @@ function App() {
         <Context.Provider value={[counter,setcounter]}>
         <Navbar/>
         </Context.Provider>
-       
+        
 <Switch>
 
   <Route exact path="/">
