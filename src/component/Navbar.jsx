@@ -1,7 +1,9 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from "react-router-dom";
-
+import { Context } from '../App';
 export default function Navbar() {
+  const [counter,setcounter]=useContext(Context);
   return (
     <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light shadow-sm">
@@ -29,8 +31,8 @@ export default function Navbar() {
      <div className="Buttons">
         
     <Link to='/login' className='btn btn-outline-dark ms-2'><i class="fa fa-sign-in" aria-hidden="true"></i> Login</Link>
-    <Link to='register' className='btn btn-outline-dark ms-2'><i class="fa fa-registered" aria-hidden="true"></i> Register</Link>
-    <Link to='cart' className='btn btn-outline-dark ms-2'><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart (0)</Link>
+    <Link to='/register' className='btn btn-outline-dark ms-2'><i class="fa fa-registered" aria-hidden="true"></i> Register</Link>
+    <Link to='/cart' className='btn btn-outline-dark ms-2'><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart {counter}</Link>
     
      </div>
     </div>

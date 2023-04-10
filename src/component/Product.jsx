@@ -4,11 +4,19 @@ import { useState,useEffect} from 'react';
 import { Link } from "react-router-dom";
 import { AiFillStar } from 'react-icons/ai';
 import Skeleton from 'react-loading-skeleton';
-
-
-
+import { Context } from '../App';
+import { useContext } from 'react';
 export default function Product() {
   
+const [counter,setcounter]=useContext(Context);
+
+const add=()=>{
+
+  const c=counter+1;
+  setcounter(c);
+  
+  
+    }
  
     const {id}=useParams();
     const [isloading, setisloading] = useState(true);
@@ -82,8 +90,8 @@ return(
       <br></br>
       <h2><b>$ {product.price}</b></h2>
       <p>{product.description}</p><br></br>
-      <Link to="/" class="btn  btn-outline-dark">Add to Cart</Link>
-      <Link to="/cart" class="btn  btn-outline-dark m-2">Go to Cart</Link>
+      <Link class="btn  btn-outline-dark" onclick={add}>Add to Cart</Link>
+      <Link  class="btn  btn-outline-dark m-2" onclick={add}>Go to Cart</Link>
 
  
     </div>
