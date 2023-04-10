@@ -14,10 +14,11 @@ import { createContext } from 'react';
 import { useState } from 'react';
 
 export const Context=createContext(null);
-
+export const Context1=createContext(null);
 
 function App() {
   const [counter,setcounter]=useState(0);
+  const [p,setp]=useState("ahmad");
   return (
     <Router>
 
@@ -47,14 +48,17 @@ function App() {
   <Route  path="/login" >
   <Login/>
   </Route>
-  <Route  path="/cart">
-  <Cart/>
-  </Route>
+ 
+  <Context1.Provider value={[p,setp]}>
   <Context.Provider value={[counter,setcounter]}>
   <Route path="/product/:id">
   <Product/>
   </Route>
   </Context.Provider>
+  <Route  path="/cart">
+  <Cart/>
+  </Route>
+  </Context1.Provider>
  
 
   

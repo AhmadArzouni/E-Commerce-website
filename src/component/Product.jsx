@@ -4,18 +4,19 @@ import { useState,useEffect} from 'react';
 import { Link } from "react-router-dom";
 import { AiFillStar } from 'react-icons/ai';
 import Skeleton from 'react-loading-skeleton';
-import { Context } from '../App';
+import { Context,Context1 } from '../App';
 import { useContext } from 'react';
 export default function Product() {
   
 const [counter,setcounter]=useContext(Context);
-
+const[p,setp]=useContext(Context1);
 const add=()=>{
 
   const c=counter+1;
   setcounter(c);
-  
-  console.log("ahmad");
+  const all={title:product.title,price:product.price,rate:product.rating.rate};
+  setp(all);
+ 
     }
  
     const {id}=useParams();
@@ -110,7 +111,7 @@ return(
     <div>
 {isloading?<Loading/>:<Showproduct/>}
 
-
+{p.title}
     </div>
   )
 }
