@@ -6,7 +6,7 @@ export default function Footer() {
     <div className='row1'>
 
 
-<div className="col">
+<div className="col1">
 <h3>
 						Download Our App
 					</h3>
@@ -18,7 +18,7 @@ export default function Footer() {
 						<img src='/assets/a.png'/>
 					</div>
 </div>
-<div className="col">
+<div className="col1">
 <h3>
 						Useful links
 					</h3>
@@ -30,7 +30,7 @@ export default function Footer() {
 						
 					</ul>
 </div>
-<div className="col">
+<div className="col1">
 <h3>
 						Follow Us
 					</h3>
