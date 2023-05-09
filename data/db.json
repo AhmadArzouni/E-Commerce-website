@@ -1,17 +1,9 @@
 {
-"ahmad":[
-{"id":1,
-"title":"products 1"
-},
-{"id":2,
-"title":"products 2"
-},
-{"id":3,
-"title":"products 3"
-}
-
-]
-
-
-
+  "ahmad": [
+    {
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "id": 1
+    }
+  ]
 }

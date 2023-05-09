@@ -9,19 +9,33 @@ import { useContext } from 'react';
 export default function Product() {
   
 const [counter,setcounter]=useContext(Context);
-const[p,setp]=useContext(Context1);
-const add=()=>{
 
+const[title,settitle]=useState("");
+const[price,setprice]=useState("");
+const add=(e)=>{
+  e.preventDefault();
   const c=counter+1;
   setcounter(c);
-  const all={title:product.title,price:product.price,rate:product.rating.rate};
-  setp(all);
+  
+   
+    const ppp={title,price};
+console.log(ppp);
+
+fetch('http://localhost:3001/ahmad/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(ppp)
+  })
  
+
+
+
+
     }
  
     const {id}=useParams();
     const [isloading, setisloading] = useState(true);
-    const [product, setproduct] = useState("");
+    const [product, setproduct] = useState([]);
     useEffect(() => {
         const getproducts = async () => {
             setisloading(true);
@@ -29,6 +43,7 @@ const add=()=>{
            
               
               setproduct(await response.json());
+              
               setisloading(false);
               
             }
@@ -91,9 +106,10 @@ return(
       <br></br>
       <h2><b>$ {product.price}</b></h2>
       <p>{product.description}</p><br></br>
-      <Link class="btn  btn-outline-dark" onClick={add}>Add to Cart</Link>
-      <Link to='/cart' class="btn  btn-outline-dark m-2" >Go to Cart</Link>
-
+      <Link className="btn  btn-outline-dark" onClick={add}>Add to Cart</Link>
+      <Link to='/cart' className="btn  btn-outline-dark m-2" >Go to Cart</Link>
+{settitle(product.title)}
+ { setprice(product.price)}
  
     </div>
     </div>
@@ -111,7 +127,7 @@ return(
     <div>
 {isloading?<Loading/>:<Showproduct/>}
 
-{p.title}
+
     </div>
   )
 }

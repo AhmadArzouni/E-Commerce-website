@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from './Footer'
 
 export default function AboutUs() {
+
+
   return (
     <div className='about'>
 	<div className="aboutContent">

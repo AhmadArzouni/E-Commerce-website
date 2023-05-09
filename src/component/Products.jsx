@@ -13,7 +13,6 @@ const filterproducts=(cat)=>{
   console.log(Data);
   const d=Data.filter((x)=>x.category===cat);
   setFilter(d);
-  
 
 }
   const Loading = () => {
@@ -22,9 +21,9 @@ const filterproducts=(cat)=>{
       
        <div className="ahmad">
       <div className="col-md-3">
-              <div class="card1 h-100 text-center p-4 ">
+              <div className="card1 h-100 text-center p-4 ">
                 
-                <div class="card-body">
+                <div className="card-body">
                   
                   
                 <Skeleton height={200} width={180}/>
@@ -33,9 +32,9 @@ const filterproducts=(cat)=>{
               </div>
             </div> 
             <div className="col-md-3">
-              <div class="card1 h-100 text-center p-4 ">
+              <div className="card1 h-100 text-center p-4 ">
                 
-                <div class="card-body">
+                <div className="card-body">
                   
                   
                 <Skeleton height={200} width={180}/>
@@ -44,9 +43,9 @@ const filterproducts=(cat)=>{
               </div>
             </div> 
             <div className="col-md-3">
-              <div class="card1 h-100 text-center p-4 ">
+              <div className="card1 h-100 text-center p-4 ">
                 
-                <div class="card-body">
+                <div className="card-body">
                   
                   
                 <Skeleton height={200} width={180}/>
@@ -55,9 +54,9 @@ const filterproducts=(cat)=>{
               </div>
             </div> 
             <div className="col-md-3">
-              <div class="card1 h-100 text-center p-4 ">
+              <div className="card1 h-100 text-center p-4 ">
                 
-                <div class="card-body">
+                <div className="card-body">
                   
                   
                 <Skeleton height={200} width={180}/>
@@ -96,12 +95,12 @@ const filterproducts=(cat)=>{
         
           return (
             <div className="col-md-3">
-              <div class="card1 h-100 text-center p-4 " key={product.id}>
-                <img src={product.image} class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">{product.title.substring(0,12)}</h5>
-                  <p class="card-text">${product.price}</p>
-                  <Link to={`/product/${product.id}`} class="btn  btn-outline-dark">
+              <div className="card1 h-100 text-center p-4 " key={product.id}>
+                <img src={product.image} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">{product.title.substring(0,12)}</h5>
+                  <p className="card-text">${product.price}</p>
+                  <Link to={`/product/${product.id}`} className="btn  btn-outline-danger">
                     Buy
                   </Link>
                 </div>
